@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module A7</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>A7</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/matt.suncy/Documents/CISC%20121/A7/A7.py">/Users/matt.suncy/Documents/CISC 121/A7/A7.py</a></font></td></tr></table>
+    <p><tt>CISC-121&nbsp;2022W<br>
+&nbsp;&nbsp;<br>
+This&nbsp;program&nbsp;organizes&nbsp;animals&nbsp;into&nbsp;different&nbsp;clusters&nbsp;based&nbsp;on&nbsp;the<br>
+attributes&nbsp;of&nbsp;each&nbsp;animal.&nbsp;This&nbsp;program&nbsp;contains&nbsp;3&nbsp;different&nbsp;distance<br>
+measures&nbsp;that&nbsp;are&nbsp;used&nbsp;to&nbsp;create&nbsp;clusters.&nbsp;<br>
+&nbsp;<br>
+Name:&nbsp;Matthew&nbsp;Sun<br>
+Student&nbsp;Number:&nbsp;20273229<br>
+Email:&nbsp;matt.suncy@gmail.com<br>
+&nbsp;<br>
+I&nbsp;confirm&nbsp;that&nbsp;this&nbsp;assignment&nbsp;solution&nbsp;is&nbsp;my&nbsp;own&nbsp;work&nbsp;and&nbsp;conforms&nbsp;to&nbsp;<br>
+Queen's&nbsp;standards&nbsp;of&nbsp;Academic&nbsp;Integrity</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-canberra_dist"><strong>canberra_dist</strong></a>(list1, list2)</dt><dd><tt>Function&nbsp;calculates&nbsp;the&nbsp;Canberra&nbsp;distance&nbsp;distance&nbsp;betwen&nbsp;two&nbsp;points,&nbsp;as<br>
+such&nbsp;the&nbsp;lists&nbsp;should&nbsp;contain&nbsp;the&nbsp;same&nbsp;number&nbsp;of&nbsp;elements.<br>
+&nbsp;<br>
+Parameters:&nbsp;list1&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+list2&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+&nbsp;<br>
+Returns:&nbsp;distance&nbsp;-&nbsp;the&nbsp;calculated&nbsp;distance</tt></dd></dl>
+ <dl><dt><a name="-euclid_dist"><strong>euclid_dist</strong></a>(list1, list2)</dt><dd><tt>Function&nbsp;calculates&nbsp;the&nbsp;Euclidean&nbsp;distance&nbsp;distance&nbsp;betwen&nbsp;two&nbsp;points,&nbsp;as<br>
+such&nbsp;the&nbsp;lists&nbsp;should&nbsp;contain&nbsp;the&nbsp;same&nbsp;number&nbsp;of&nbsp;elements.<br>
+&nbsp;<br>
+Parameters:&nbsp;list1&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+list2&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+&nbsp;<br>
+Returns:&nbsp;distance&nbsp;-&nbsp;the&nbsp;calculated&nbsp;distance</tt></dd></dl>
+ <dl><dt><a name="-make_clusters_canberra"><strong>make_clusters_canberra</strong></a>(zoo_dict)</dt><dd><tt>Function&nbsp;uses&nbsp;the&nbsp;Canberra&nbsp;distance&nbsp;measure&nbsp;to&nbsp;group&nbsp;animals&nbsp;into&nbsp;7<br>
+clusters&nbsp;based&nbsp;on&nbsp;their&nbsp;attributes.<br>
+&nbsp;<br>
+Parameters:&nbsp;zoo_dict&nbsp;-&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;animal&nbsp;names&nbsp;as&nbsp;keys&nbsp;and&nbsp;a&nbsp;list<br>
+of&nbsp;integers&nbsp;that&nbsp;represent&nbsp;their&nbsp;attributes<br>
+&nbsp;<br>
+Returns:&nbsp;new_clusters&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;clusters&nbsp;of&nbsp;animals</tt></dd></dl>
+ <dl><dt><a name="-make_clusters_euclid"><strong>make_clusters_euclid</strong></a>(zoo_dict)</dt><dd><tt>Function&nbsp;uses&nbsp;the&nbsp;Euclidean&nbsp;distance&nbsp;measure&nbsp;to&nbsp;group&nbsp;animals&nbsp;into&nbsp;7<br>
+clusters&nbsp;based&nbsp;on&nbsp;their&nbsp;attributes.<br>
+&nbsp;<br>
+Parameters:&nbsp;zoo_dict&nbsp;-&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;animal&nbsp;names&nbsp;as&nbsp;keys&nbsp;and&nbsp;a&nbsp;list<br>
+of&nbsp;integers&nbsp;that&nbsp;represent&nbsp;their&nbsp;attributes<br>
+&nbsp;<br>
+Returns:&nbsp;new_clusters&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;clusters&nbsp;of&nbsp;animals</tt></dd></dl>
+ <dl><dt><a name="-make_clusters_manhattan"><strong>make_clusters_manhattan</strong></a>(zoo_dict)</dt><dd><tt>Function&nbsp;uses&nbsp;the&nbsp;Manhattan&nbsp;distance&nbsp;measure&nbsp;to&nbsp;group&nbsp;animals&nbsp;into&nbsp;7<br>
+clusters&nbsp;based&nbsp;on&nbsp;their&nbsp;attributes.<br>
+&nbsp;<br>
+Parameters:&nbsp;zoo_dict&nbsp;-&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;animal&nbsp;names&nbsp;as&nbsp;keys&nbsp;and&nbsp;a&nbsp;list<br>
+of&nbsp;integers&nbsp;that&nbsp;represent&nbsp;their&nbsp;attributes<br>
+&nbsp;<br>
+Returns:&nbsp;new_clusters&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;clusters&nbsp;of&nbsp;animals</tt></dd></dl>
+ <dl><dt><a name="-manhattan_metric"><strong>manhattan_metric</strong></a>(list1, list2)</dt><dd><tt>Function&nbsp;calculates&nbsp;the&nbsp;Manhattan&nbsp;distance&nbsp;distance&nbsp;betwen&nbsp;two&nbsp;points,&nbsp;as<br>
+such&nbsp;the&nbsp;lists&nbsp;should&nbsp;contain&nbsp;the&nbsp;same&nbsp;number&nbsp;of&nbsp;elements.<br>
+&nbsp;<br>
+Parameters:&nbsp;list1&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+list2&nbsp;-&nbsp;a&nbsp;list&nbsp;of&nbsp;integers<br>
+&nbsp;<br>
+Returns:&nbsp;distance&nbsp;-&nbsp;the&nbsp;calculated&nbsp;distance</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__warningregistry__</strong> = {'version': 6}<br>
+<strong>canberra_cluster</strong> = [['pitviper', 'scorpion'], ['clam', 'seawasp'], ['bass', 'carp', 'catfish', 'chub', 'dogfish', 'dolphin', 'haddock', 'herring', 'pike', 'piranha', 'porpoise', 'seahorse', 'seasnake', 'sole', 'stingray', 'tuna'], ['flea', 'gnat', 'honeybee', 'housefly', 'ladybird', 'moth', 'slug', 'termite', 'toad', 'wasp', 'worm'], ['chicken', 'crow', 'dove', 'duck', 'flamingo', 'gull', 'hawk', 'kiwi', 'lark', 'newt', 'ostrich', 'parakeet', 'penguin', 'pheasant', 'rhea', 'skimmer', 'skua', 'slowworm', 'sparrow', 'swan', ...], ['crab', 'crayfish', 'frog', 'lobster', 'octopus', 'starfish'], ['aardvark', 'antelope', 'bear', 'boar', 'buffalo', 'calf', 'cavy', 'cheetah', 'deer', 'elephant', 'fruitbat', 'giraffe', 'goat', 'gorilla', 'hamster', 'hare', 'human', 'leopard', 'lion', 'lynx', ...]]<br>
+<strong>euclid_cluster</strong> = [['clam', 'crab', 'seawasp'], ['human', 'pitviper', 'seal', 'seasnake', 'slowworm'], ['slug', 'worm'], ['crayfish', 'flea', 'gnat', 'honeybee', 'housefly', 'ladybird', 'lobster', 'moth', 'octopus', 'scorpion', 'starfish', 'termite', 'wasp'], ['aardvark', 'antelope', 'bear', 'boar', 'buffalo', 'calf', 'cavy', 'cheetah', 'deer', 'elephant', 'frog', 'giraffe', 'goat', 'gorilla', 'hamster', 'hare', 'leopard', 'lion', 'lynx', 'mink', ...], ['bass', 'carp', 'catfish', 'chub', 'dogfish', 'dolphin', 'haddock', 'herring', 'pike', 'piranha', 'porpoise', 'seahorse', 'sealion', 'sole', 'stingray', 'tuna'], ['chicken', 'crow', 'dove', 'duck', 'flamingo', 'fruitbat', 'gull', 'hawk', 'kiwi', 'lark', 'ostrich', 'parakeet', 'penguin', 'pheasant', 'rhea', 'skimmer', 'skua', 'sparrow', 'squirrel', 'swan', ...]]<br>
+<strong>i</strong> = 9<br>
+<strong>infile</strong> = ['aardvark  1  0  0  1  0  0  1  1  1  1  0  0  4  0  0<font color="#c040c0">\n</font>', 'antelope  1  0  0  1  0  0  0  1  1  1  0  0  4  1  0<font color="#c040c0">\n</font>', 'bass  0  0  1  0  0  1  1  1  1  0  0  1  0  1  0<font color="#c040c0">\n</font>', 'bear  1  0  0  1  0  0  1  1  1  1  0  0  4  0  0<font color="#c040c0">\n</font>', 'boar  1  0  0  1  0  0  1  1  1  1  0  0  4  1  0<font color="#c040c0">\n</font>', 'buffalo  1  0  0  1  0  0  0  1  1  1  0  0  4  1  0<font color="#c040c0">\n</font>', 'calf  1  0  0  1  0  0  0  1  1  1  0  0  4  1  1<font color="#c040c0">\n</font>', 'carp  0  0  1  0  0  1  0  1  1  0  0  1  0  1  1<font color="#c040c0">\n</font>', 'catfish  0  0  1  0  0  1  1  1  1  0  0  1  0  1  0<font color="#c040c0">\n</font>', 'cavy  1  0  0  1  0  0  0  1  1  1  0  0  4  0  1<font color="#c040c0">\n</font>', 'cheetah  1  0  0  1  0  0  1  1  1  1  0  0  4  1  0<font color="#c040c0">\n</font>', 'chicken  0  1  1  0  1  0  0  0  1  1  0  0  2  1  1<font color="#c040c0">\n</font>', 'chub  0  0  1  0  0  1  1  1  1  0  0  1  0  1  0<font color="#c040c0">\n</font>', 'clam  0  0  1  0  0  0  1  0  0  0  0  0  0  0  0<font color="#c040c0">\n</font>', 'crab  0  0  1  0  0  1  1  0  0  0  0  0  4  0  0<font color="#c040c0">\n</font>', 'crayfish  0  0  1  0  0  1  1  0  0  0  0  0  6  0  0<font color="#c040c0">\n</font>', 'crow  0  1  1  0  1  0  1  0  1  1  0  0  2  1  0<font color="#c040c0">\n</font>', 'deer  1  0  0  1  0  0  0  1  1  1  0  0  4  1  0<font color="#c040c0">\n</font>', 'dogfish  0  0  1  0  0  1  1  1  1  0  0  1  0  1  0<font color="#c040c0">\n</font>', 'dolphin  0  0  0  1  0  1  1  1  1  1  0  1  0  1  0<font color="#c040c0">\n</font>', ...]<br>
+<strong>j</strong> = 6<br>
+<strong>line</strong> = 'wren  0  1  1  0  1  0  0  0  1  1  0  0  2  1  0<font color="#c040c0">\n</font>'<br>
+<strong>line_words</strong> = ['wren', '0', '1', '1', '0', '1', '0', '0', '0', '1', '1', '0', '0', '2', '1', '0']<br>
+<strong>manhattan_cluster</strong> = [['antelope', 'boar', 'buffalo', 'calf', 'cheetah', 'deer', 'duck', 'elephant', 'frog', 'giraffe', 'goat', 'gorilla', 'gull', 'hamster', 'hare', 'human', 'kiwi', 'leopard', 'lion', 'lynx', ...], ['crab', 'crayfish', 'lobster', 'octopus', 'scorpion', 'starfish'], ['chicken', 'crow', 'dove', 'flamingo', 'fruitbat', 'hawk', 'lark', 'parakeet', 'pheasant', 'sparrow', 'vampire_bat', 'vulture', 'wren'], ['bass', 'carp', 'catfish', 'chub', 'clam', 'dogfish', 'dolphin', 'haddock', 'herring', 'pike', 'piranha', 'porpoise', 'seahorse', 'seal', 'slowworm', 'sole', 'tuna'], ['aardvark', 'bear', 'cavy', 'flea', 'gnat', 'honeybee', 'housefly', 'ladybird', 'moth', 'termite', 'wasp'], [], ['pitviper', 'seasnake', 'seawasp', 'stingray']]<br>
+<strong>table_index</strong> = 100<br>
+<strong>zoo_dict</strong> = {'aardvark': [1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 0, 0], 'antelope': [1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 4, 1, 0], 'bass': [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0], 'bear': [1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 0, 0], 'boar': [1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 1, 0], 'buffalo': [1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 4, 1, 0], 'calf': [1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 4, 1, 1], 'carp': [0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1], 'catfish': [0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0], 'cavy': [1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 4, 0, 1], ...}<br>
+<strong>zoo_table</strong> = array([[1, 0, 0, ..., 4, 0, 0],
+       [1, 0, 0,..., ..., 0, 0, 0],
+       [0, 1, 1, ..., 2, 1, 0]])</td></tr></table>
+</body></html>
