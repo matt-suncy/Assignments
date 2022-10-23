@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module book_recommend</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>book_recommend</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/matt.suncy/Documents/CISC%20121/A3/book_recommend.py">/Users/matt.suncy/Documents/CISC 121/A3/book_recommend.py</a></font></td></tr></table>
+    <p><tt>CISC-121&nbsp;2022W<br>
+&nbsp;&nbsp;<br>
+This&nbsp;program&nbsp;proccesses&nbsp;a&nbsp;group&nbsp;of&nbsp;books&nbsp;to&nbsp;find&nbsp;which&nbsp;of&nbsp;the&nbsp;other<br>
+books&nbsp;is&nbsp;most&nbsp;similar&nbsp;to&nbsp;it&nbsp;in&nbsp;terms&nbsp;of&nbsp;similarity&nbsp;in&nbsp;their<br>
+signature&nbsp;words.&nbsp;<br>
+&nbsp;<br>
+Name:&nbsp;Matthew&nbsp;Sun<br>
+Student&nbsp;Number:&nbsp;20273229<br>
+Email:&nbsp;matt.suncy@gmail.com<br>
+&nbsp;<br>
+I&nbsp;confirm&nbsp;that&nbsp;this&nbsp;assignment&nbsp;solution&nbsp;is&nbsp;my&nbsp;own&nbsp;work&nbsp;and&nbsp;conforms&nbsp;to&nbsp;<br>
+Queen's&nbsp;standards&nbsp;of&nbsp;Academic&nbsp;Integrity</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="tkinter.font.html">tkinter.font</a><br>
+</td><td width="25%" valign=top><a href="glob.html">glob</a><br>
+</td><td width="25%" valign=top><a href="ntpath.html">ntpath</a><br>
+</td><td width="25%" valign=top><a href="tkinter.html">tkinter</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-find_signatures"><strong>find_signatures</strong></a>(text_files, stop_words)</dt><dd><tt>This&nbsp;function&nbsp;reads&nbsp;.txt&nbsp;files&nbsp;from&nbsp;a&nbsp;directory&nbsp;and&nbsp;counts&nbsp;the&nbsp;number&nbsp;of&nbsp;<br>
+times&nbsp;non-stop-words&nbsp;appear.<br>
+&nbsp;<br>
+Parameters:&nbsp;text_files&nbsp;-&nbsp;an&nbsp;iterable&nbsp;of&nbsp;file&nbsp;directories<br>
+stop_words&nbsp;-&nbsp;a&nbsp;set&nbsp;of&nbsp;words&nbsp;for&nbsp;which&nbsp;the&nbsp;function&nbsp;will&nbsp;not&nbsp;count&nbsp;if&nbsp;it&nbsp;<br>
+is&nbsp;encountered<br>
+&nbsp;<br>
+Returns:&nbsp;book_signatures&nbsp;-&nbsp;a&nbsp;dictionary,&nbsp;keys&nbsp;are&nbsp;the&nbsp;book&nbsp;titles,&nbsp;the&nbsp;<br>
+value&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;tuples&nbsp;of&nbsp;the&nbsp;25&nbsp;most&nbsp;common&nbsp;words&nbsp;in&nbsp;the&nbsp;text,&nbsp;the&nbsp;<br>
+first&nbsp;element&nbsp;of&nbsp;each&nbsp;tuple&nbsp;is&nbsp;the&nbsp;word&nbsp;and&nbsp;the&nbsp;second&nbsp;is&nbsp;the&nbsp;frequency</tt></dd></dl>
+ <dl><dt><a name="-letters_only"><strong>letters_only</strong></a>(word)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;in&nbsp;a&nbsp;string&nbsp;and&nbsp;removes&nbsp;any&nbsp;non-letter&nbsp;character&nbsp;and&nbsp;<br>
+then&nbsp;returns&nbsp;it.<br>
+&nbsp;<br>
+Parameters:&nbsp;word&nbsp;-&nbsp;a&nbsp;string&nbsp;of&nbsp;characters<br>
+&nbsp;<br>
+Returns:&nbsp;clean_word&nbsp;-&nbsp;a&nbsp;string&nbsp;of&nbsp;only&nbsp;letters</tt></dd></dl>
+ <dl><dt><a name="-text_similarities"><strong>text_similarities</strong></a>(book_signatures)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;in&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;book&nbsp;titles&nbsp;and&nbsp;their&nbsp;signature&nbsp;<br>
+words&nbsp;and&nbsp;finds&nbsp;which&nbsp;of&nbsp;the&nbsp;other&nbsp;books&nbsp;it&nbsp;is&nbsp;most&nbsp;similar&nbsp;to&nbsp;based&nbsp;on<br>
+the&nbsp;Jacard&nbsp;similarity&nbsp;measure.<br>
+&nbsp;<br>
+Parameters:&nbsp;book_signatures&nbsp;-&nbsp;a&nbsp;dictionary,&nbsp;keys&nbsp;are&nbsp;titles,&nbsp;values&nbsp;are<br>
+lists&nbsp;of&nbsp;tuples&nbsp;containing&nbsp;words&nbsp;and&nbsp;their&nbsp;frequencies<br>
+&nbsp;<br>
+Returns:&nbsp;most_similar_dict&nbsp;-&nbsp;a&nbsp;dictionary,&nbsp;where&nbsp;each&nbsp;text&nbsp;is&nbsp;the&nbsp;key&nbsp;and<br>
+the&nbsp;values&nbsp;are&nbsp;the&nbsp;text&nbsp;that&nbsp;it&nbsp;is&nbsp;most&nbsp;similar&nbsp;to.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__warningregistry__</strong> = {'version': 0}<br>
+<strong>book_titles</strong> = ['LMM_Short_Stories_1', 'LMM_Short_Stories_2', 'Great_Gatsby', 'Poirot_Investigates', 'Adventures_Sherlock_Holmes', 'Jane_Eyre', 'Wonder_Tales_Tibet', 'Indian_Fairy_Tales', 'Pride_Prejudice', 'The_Odyssey', 'Narrative_Frederick_Douglass', 'Flint_Feather', 'Moccasin_Maker', 'Alice_Wonderland', 'Secret_Garden', 'Prophet', 'Age_Innocence', 'Legends_Vancouver', 'Myths_Legends_Japan', 'Folk_Stories_Southern_Nigeria', ...]<br>
+<strong>books_data_directory</strong> = '/Users/matt.suncy/Documents/CISC 121/A3/Books'<br>
+<strong>books_signatures</strong> = {'Adventures_Sherlock_Holmes': [('holmes', 462), ('man', 288), ('mr', 274), ('little', 269), ('may', 213), ('can', 178), ('think', 174), ('shall', 171), ('know', 170), ('come', 162), ('time', 150), ('came', 146), ('two', 143), ('door', 140), ('back', 138), ('room', 133), ('face', 128), ('might', 126), ('just', 125), ('matter', 125), ...], 'Age_Innocence': [('archer', 627), ('mrs', 412), ('new', 246), ('mr', 238), ('may', 237), ('like', 224), ('olenska', 207), ('old', 193), ('young', 182), ('madame', 175), ('back', 173), ('little', 160), ('always', 159), ('eyes', 157), ('know', 155), ('york', 152), ('newland', 148), ('long', 148), ('people', 147), ('house', 142), ...], 'Alice_Wonderland': [('alice', 385), ('little', 129), ('project', 88), ('know', 86), ('like', 85), ('went', 83), ('thought', 74), ('time', 68), ('queen', 68), ('king', 61), ('began', 58), ('mock', 57), ('turtle', 56), ('gutenbergtm', 56), ('quite', 55), ('hatter', 55), ('gryphon', 55), ('way', 54), ('think', 53), ('work', 53), ...], 'Flint_Feather': [('project', 87), ('gutenbergtm', 56), ('like', 54), ('work', 52), ('night', 52), ('little', 50), ('may', 48), ('heart', 48), ('day', 48), ('life', 45), ('eyes', 45), ('o', 44), ('love', 43), ('long', 41), ('never', 41), ('can', 41), ('hand', 41), ('far', 39), ('great', 37), ('old', 37), ...], 'Folk_Stories_Southern_Nigeria': [('king', 258), ('ju', 200), ('told', 182), ('tortoise', 175), ('people', 165), ('went', 165), ('time', 130), ('house', 122), ('man', 107), ('day', 104), ('food', 102), ('water', 94), ('go', 88), ('project', 87), ('daughter', 87), ('wife', 86), ('much', 85), ('old', 84), ('leopard', 83), ('bush', 82), ...], 'Great_Gatsby': [('gatsby', 194), ('tom', 175), ('daisy', 147), ('like', 120), ('back', 109), ('came', 108), ('man', 106), ('little', 103), ('just', 100), ('know', 98), ('house', 91), ('went', 91), ('project', 90), ('eyes', 86), ('come', 85), ('got', 85), ('mr', 84), ('old', 83), ('looked', 82), ('time', 81), ...], 'Indian_Fairy_Tales': [('king', 302), ('prince', 285), ('son', 230), ('came', 193), ('went', 190), ('go', 184), ('day', 157), ('man', 138), ('come', 137), ('time', 133), ('little', 132), ('princess', 124), ('old', 122), ('away', 118), ('can', 115), ('shall', 115), ('took', 111), ('father', 110), ('gave', 108), ('country', 107), ...], 'Jane_Eyre': [('mr', 540), ('like', 362), ('little', 342), ('jane', 324), ('rochester', 312), ('miss', 307), ('sir', 298), ('never', 286), ('thought', 254), ('mrs', 250), ('yet', 244), ('still', 243), ('go', 240), ('shall', 240), ('can', 239), ('long', 238), ('know', 222), ('time', 221), ('think', 218), ('come', 217), ...], 'Journey_Centre_Earth': [('uncle', 482), ('professor', 177), ('great', 169), ('hans', 168), ('cried', 167), ('like', 167), ('earth', 160), ('time', 126), ('water', 124), ('last', 119), ('however', 118), ('way', 116), ('two', 114), ('sea', 114), ('still', 112), ('nothing', 107), ('can', 107), ('every', 106), ('man', 104), ('day', 101), ...], 'LMM_Short_Stories_1': [('never', 182), ('mrs', 153), ('little', 152), ('went', 148), ('go', 146), ('came', 146), ('face', 135), ('miss', 133), ('come', 121), ('time', 120), ('know', 119), ('thought', 114), ('eyes', 114), ('think', 114), ('back', 112), ('like', 111), ('mr', 97), ('home', 96), ('good', 92), ('just', 91), ...], ...}<br>
+<strong>col_0_head</strong> = &lt;tkinter.Label object .!label&gt;<br>
+<strong>col_1_head</strong> = &lt;tkinter.Label object .!label2&gt;<br>
+<strong>columns</strong> = 2<br>
+<strong>i</strong> = 24<br>
+<strong>j</strong> = 1<br>
+<strong>line</strong> = 'without'<br>
+<strong>n</strong> = 25<br>
+<strong>rows</strong> = 25<br>
+<strong>similar_texts</strong> = {'Adventures_Sherlock_Holmes': 'Poirot_Investigates', 'Age_Innocence': 'Great_Gatsby', 'Alice_Wonderland': 'LMM_Short_Stories_1', 'Flint_Feather': 'Wonder_Tales_Tibet', 'Folk_Stories_Southern_Nigeria': 'Indian_Fairy_Tales', 'Great_Gatsby': 'LMM_Short_Stories_1', 'Indian_Fairy_Tales': 'Wonder_Tales_Tibet', 'Jane_Eyre': 'LMM_Short_Stories_1', 'Journey_Centre_Earth': 'Jane_Eyre', 'LMM_Short_Stories_1': 'LMM_Short_Stories_2', ...}<br>
+<strong>stop_words</strong> = {'', 'a', 'about', 'above', 'after', 'again', ...}<br>
+<strong>stop_words_file</strong> = &lt;_io.TextIOWrapper name='StopWords.txt' mode='r' encoding='UTF-8'&gt;<br>
+<strong>text_files</strong> = ['/Users/matt.suncy/Documents/CISC 121/A3/Books/Prophet.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Age_Innocence.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Flint_Feather.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Moccasin_Maker.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Pride_Prejudice.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Great_Gatsby.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/The_Odyssey.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Myths_Legends_China.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Alice_Wonderland.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Siddhartha.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Folk_Stories_Southern_Nigeria.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Legends_Vancouver.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Poirot_Investigates.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Wonder_Tales_Tibet.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Myths_Legends_Japan.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Adventures_Sherlock_Holmes.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Secret_Garden.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/LMM_Short_Stories_1.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Indian_Fairy_Tales.txt', '/Users/matt.suncy/Documents/CISC 121/A3/Books/Wonderful_Wizard_Oz.txt', ...]<br>
+<strong>window</strong> = &lt;tkinter.Tk object .&gt;<br>
+<strong>word</strong> = 'without'<br>
+<strong>x</strong> = &lt;tkinter.Label object .!label52&gt;</td></tr></table>
+</body></html>
