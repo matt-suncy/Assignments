@@ -80,19 +80,19 @@ public class PpmStacker {
 	 */
 	private SimpleImage average() {
 		
-		SimpleImage avgImg = new SimpleImage(this.stack.get(0).height(), this.stack.get(0).width());
+		SimpleImage avgImg = new SimpleImage(this.stack.get(0).width(), this.stack.get(0).height());
 		
-		for (int i = 0; i < this.stack.get(0).height(); i++) {
-			for (int j = 0; j < this.stack.get(0).width(); j++) {
+		for (int i = 0; i < this.stack.get(0).width(); i++) {
+			for (int j = 0; j < this.stack.get(0).height(); j++) {
 				
 				double rSum = 0;
 				double gSum = 0;
 				double bSum = 0;
 				for (int k = 0; k < this.stack.size(); k++) {
 					
-					rSum += this.stack.get(k).get(i, j).getRed();
-					gSum += this.stack.get(k).get(i, j).getGreen();
-					bSum += this.stack.get(k).get(i, j).getBlue();
+					rSum += this.stack.get(k).get(j, i).getRed();
+					gSum += this.stack.get(k).get(j, i).getGreen();
+					bSum += this.stack.get(k).get(j, i).getBlue();
 				}
 				
 				int rAvg = (int) Math.round(rSum / this.stack.size());
